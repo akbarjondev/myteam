@@ -68,3 +68,54 @@
 	font-weight: 600;
 	color: $white;
 }
+
+// responsive
+@include breakpoint-down(768px) {
+	.build {
+		padding-top: 100px;
+		padding-bottom: 100px;
+		background-image: url("../img/build-bg-bottom.png");
+		background-position: top right calc(50% - 385px);
+	}
+	.build__container {
+		flex-direction: column;
+		padding-left: 100px;
+		padding-right: 100px;
+	}
+	.build__heading {
+		font-size: 32px;
+		line-height: 32px;
+	}
+	.build__heading::before {
+		margin-bottom: 32px;
+	}
+}
+@include breakpoint-down(375px) {
+	.build {
+		padding-top: 65px;
+		padding-bottom: 65px;
+	}
+	.build__container {
+		padding-left: 24px;
+		padding-right: 24px;
+	}
+	.build__heading {
+		max-width: 240px;
+	}
+	.build__item {
+		flex-direction: column;
+		margin-bottom: 48px;
+	}
+	.feature__heading,
+	.feature__text {
+		text-align: center;
+	}
+}
+
+// retina
+@include retina() {
+	.build {
+		background-image: url("../img/build-bg-bottom@2x.png");
+		background-position: top right calc(50% - 190px);
+	}
+}
