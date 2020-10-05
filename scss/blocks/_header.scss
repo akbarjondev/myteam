@@ -1,0 +1,147 @@
+.site-header {
+	padding-top: 75px;
+	padding-bottom: 75px;
+}
+.site-header__container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.site-header {
+	background-color: $midnight-green;
+}
+.logo {
+	flex-shrink: 0;
+}
+.logo__img {
+	display: block;
+}
+.nav {
+	flex-grow: 1;
+	display: flex;
+	justify-content: space-between;
+	transition: 0.3s ease all;
+}
+.curtain {
+	display: none;
+}
+.nav__list {
+	@include reset-list;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	margin: 0 60px;
+}
+.nav__item {
+	margin: 0 20px;
+}
+.nav__link {
+	text-decoration: none;
+	font-size: 18px;
+	line-height: 28px;
+	font-weight: 600;
+	color: $white;
+}
+.nav__link:hover {
+	color: $light-coral;
+}
+.site-header__contact {
+	flex-shrink: 0;
+}
+.site-header__burger {
+	flex-shrink: 0;
+	position: relative;
+	z-index: 100;
+	padding: 0;
+	border: none;
+	display: none;
+	width: 20px;
+	height: 17px;
+	background-color: transparent;
+	background-image: url("../img/menu.svg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: top left;
+	cursor: pointer;
+	transition: 0.3s ease all;
+}
+
+// responsive
+@include breakpoint-down(768px) {
+	.container {
+		padding-left: 40px;
+		padding-right: 40px;
+	}
+	.site-header {
+		padding-top: 65px;
+		padding-bottom: 65px;
+	}
+	.logo {
+		width: 128px;
+		height: 32px;
+	}
+	.nav__list {
+		margin-left: 28px;
+		margin-right: 28px;
+	}
+}
+
+@include breakpoint-down(500px) {
+	.contact-link {
+		display: none;
+	}
+}
+
+@include breakpoint-down(375px) {
+	.nav {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 10;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: flex-start;
+		margin-left: 33%;
+		padding-top: 145px;
+		padding-left: 50px;
+		background-color: #2c6269;
+		transform: translateX(255px);
+	}
+	.nav::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0%;
+		right: 0;
+		bottom: 0;	
+		z-index: -1;
+		background-color: rgba(0, 0, 0, 0.3);
+	}
+	.nav--toggle {
+		transform: translateX(0px);
+	}
+	.nav--toggle::before {
+		left: -100%;
+	}
+	.nav__list {
+		flex-direction: column;
+		margin: 0;
+	}
+	.nav__item {
+		margin: 0;
+		margin-top: 12px;
+		margin-bottom: 12px;
+	}
+	.site-header__burger {
+		display: block;
+	}
+	.contact-link {
+		display: inline-block;
+		margin-top: 24px;
+	}
+	.site-header__burger--close {
+		background-position: top right;
+	}
+}
