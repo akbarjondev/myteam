@@ -1,0 +1,21 @@
+.ready {
+	padding-top: 76px;
+	padding-bottom: 76px;
+	background-color: $light-coral;
+	background-image: url("../img/ready-bg.png");
+	background-repeat: no-repeat;
+	background-position: left calc(50% - 680px) bottom -100px;
+	background-size: 200px 244px;
+}
+.ready__container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-left: 100px;
+	padding-right: 100px;
+}
+.ready__heading {
+	font-size: 48px;
+	line-height: 38px;
+	color: #012F34;
+}
