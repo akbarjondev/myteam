@@ -94,6 +94,7 @@
 	.build {
 		padding-top: 65px;
 		padding-bottom: 65px;
+		background-position: top right calc(50% - 190px);
 	}
 	.build__container {
 		padding-left: 24px;
@@ -110,12 +111,12 @@
 	.feature__text {
 		text-align: center;
 	}
+
 }
 
 // retina
 @include retina() {
 	.build {
 		background-image: url("../img/build-bg-bottom@2x.png");
-		background-position: top right calc(50% - 190px);
 	}
 }

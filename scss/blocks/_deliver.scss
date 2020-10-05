@@ -43,8 +43,10 @@
 	bottom: 90%;
 }
 .quote__text {
-	color: $white;
 	margin: 0;
+	font-size: 15px;
+	line-height: 25px;
+	color: $white;
 	margin-bottom: 24px;
 	text-align: center;
 }
@@ -105,4 +107,16 @@
 	.quote::after {
 		bottom: 95%;
 	}
+}
+
+@include breakpoint-down(768px) {
+  .deliver {
+  	padding-top: 140px;
+  	padding-bottom: 140px;
+		background-position: top left calc(50% - 115px), bottom calc(50% - 700px) right calc(50% - 120px);
+  }
+  .deliver__container {
+  	padding-left: 24px;
+  	padding-right: 24px;
+  }
 }

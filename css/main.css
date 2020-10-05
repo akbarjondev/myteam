@@ -396,6 +396,10 @@ img {
   color: #F67E7E;
 }
 
+.text-blue {
+  color: #79c8c7;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -555,40 +559,33 @@ img {
   }
 }
 @media only screen and (max-width: 375px) {
-  .nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 10;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    margin-left: 33%;
-    padding-top: 145px;
-    padding-left: 50px;
-    background-color: #2c6269;
-    transform: translateX(255px);
-  }
-
-  .nav::before {
-    content: "";
+  .nav--dark {
     position: absolute;
     top: 0;
-    left: 0%;
     right: 0;
     bottom: 0;
-    z-index: -1;
-    background-color: rgba(0, 0, 0, 0.3);
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.2);
   }
 
-  .nav--toggle {
+  .nav-inner {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 66%;
+    padding-top: 112px;
+    padding-left: 48px;
+    background-color: #2c6269;
+    transform: translateX(260px);
+    transition: all 0.3s ease;
+  }
+
+  .nav-inner--toggle {
     transform: translateX(0px);
-  }
-
-  .nav--toggle::before {
-    left: -100%;
   }
 
   .nav__list {
@@ -810,6 +807,7 @@ img {
   .build {
     padding-top: 65px;
     padding-bottom: 65px;
+    background-position: top right calc(50% - 190px);
   }
 
   .build__container {
@@ -834,7 +832,6 @@ img {
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .build {
     background-image: url("../img/build-bg-bottom@2x.png");
-    background-position: top right calc(50% - 190px);
   }
 }
 .deliver {
@@ -890,8 +887,10 @@ img {
 }
 
 .quote__text {
-  color: #ffffff;
   margin: 0;
+  font-size: 15px;
+  line-height: 25px;
+  color: #ffffff;
   margin-bottom: 24px;
   text-align: center;
 }
@@ -957,6 +956,18 @@ img {
 
   .quote::after {
     bottom: 95%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .deliver {
+    padding-top: 140px;
+    padding-bottom: 140px;
+    background-position: top left calc(50% - 115px), bottom calc(50% - 700px) right calc(50% - 120px);
+  }
+
+  .deliver__container {
+    padding-left: 24px;
+    padding-right: 24px;
   }
 }
 
