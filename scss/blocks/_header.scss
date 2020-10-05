@@ -22,8 +22,10 @@
 	justify-content: space-between;
 	transition: 0.3s ease all;
 }
-.curtain {
-	display: none;
+.nav-inner {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
 }
 .nav__list {
 	@include reset-list;
@@ -83,6 +85,9 @@
 	.nav__list {
 		margin-left: 28px;
 		margin-right: 28px;
+	}
+	.nav-inner {
+		justify-content: flex-start;
 	}
 }
 
