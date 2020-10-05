@@ -75,3 +75,34 @@
 		background-image: url("../img/deliver-right-bg@2x.png"), url("../img/deliver-bottom-bg@2x.png");
 	}
 }
+
+// responsive
+@include breakpoint-down(768px) {
+	.deliver {
+		padding-top: 100px;
+		padding-bottom: 100px;
+		background-position: top left calc(50% - 310px), bottom calc(50% - 665px) right calc(50% - 290px);
+	}
+	.deliver__container {
+		padding-left: 95px;
+		padding-right: 95px;
+	}
+	.deliver__heading {
+		font-size: 32px;
+		line-height: 32px;
+	}
+	.deliver__list {
+		flex-direction: column;
+		align-items: center;
+	}
+	.deliver__item {
+		max-width: 573px;
+		margin-bottom: 84px;
+	}
+	.quote__company {
+		margin-bottom: 16px;
+	}
+	.quote::after {
+		bottom: 95%;
+	}
+}
