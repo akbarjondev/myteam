@@ -1,0 +1,70 @@
+.build {
+	padding-top: 140px;
+	padding-bottom: 140px;
+	background-color: #012f34;
+	background-image: url("../img/build-bg-bottom.png");
+	background-size: 200px 244px;
+	background-position: bottom right calc(50% - 760px);
+	background-repeat: no-repeat;
+}
+.build__container {
+	display: flex;
+	justify-content: space-between;
+}
+.build__heading {
+	max-width: 445px;
+	margin: 0;
+	font-size: 48px;
+	line-height: 48px;
+	color: $white;
+}
+.build__heading::before {
+	content: "";
+	display: block;
+	width: 50px;
+	height: 4px;
+	margin-bottom: 55px;
+	background-color: $light-coral;
+}
+.build__list {
+	@include reset-list;
+	margin-top: 55px;
+}
+.build__item {
+	display: flex;
+	align-items: center;
+	max-width: 500px;
+	margin-bottom: 32px;
+}
+.build__item::before {
+	flex-shrink: 0;
+	content: "";
+	width: 72px;
+	height: 72px;
+	margin-right: 23px;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+}
+.feature--experienced::before {
+	background-image: url("../img/icon-experienced.svg");
+}
+.feature--gear::before {
+	background-image: url("../img/icon-gear.svg");
+}
+.feature--stat::before {
+	background-image: url("../img/icon-stat.svg");
+}
+.feature__heading {
+	margin: 0;
+	margin-bottom: 16px;
+	font-size: 18px;
+	line-height: 28px;
+	color: $light-coral;
+}
+.feature__text {
+	font-size: 15px;
+	line-height: 25px;
+	font-weight: 600;
+	color: $white;
+}

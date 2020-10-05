@@ -1,0 +1,79 @@
+.hero {
+	padding-top: 55px;
+	padding-bottom: 250px;
+	background-color: $midnight-green;
+	background-image: url("../img/disk-left.png"), url("../img/disk-bottom.png");
+	background-size: 200px 200px, 358px 200px;
+	background-position: center left calc(50% - 760px), bottom -100px right calc(50% - 415px);
+	background-repeat: no-repeat;
+}
+.hero__container {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+}
+.hero__heading {
+	flex-grow: 1;
+	max-width: 600px;
+	margin: 0;
+	font-size: 100px;
+	line-height: 100px;
+	color: $white;
+}
+.hero__text {
+	max-width: 455px;
+	margin: 0;
+	font-size: 18px;
+	line-height: 28px;
+	color: $white;
+	font-weight: 600;
+}
+.hero__text::before {
+	content: "";
+	display: block;
+	width: 50px;
+	height: 4px;
+	margin-bottom: 80px;
+	background-color: #79c8c7;
+}
+
+// retina bg-image
+@include retina() {
+	.hero {
+		background-image: url("../img/disk-left@2x.png"), url("../img/disk-bottom@2x.png");
+	}
+}
+
+@include breakpoint-down(768px) {
+	.hero {
+		background-image: url("../img/disk-bottom.png");
+		background-position: center bottom -100px;
+		background-size: 358px 200px;
+	}
+	.hero__container {
+		flex-direction: column;
+		align-items: center;
+	}
+	.hero__heading {
+		margin-bottom: 24px;
+		font-size: 64px;
+		line-height: 56px;
+		text-align: center;
+	}
+	.hero__text {
+		font-size: 15px;
+		line-height: 28px;
+		font-weight: 600;
+		text-align: center;
+	}
+	.hero__text::before {
+		display: none;
+	}
+}
+
+@include breakpoint-down(768px) {
+	.hero__heading {
+		font-size: 40px;
+		line-height: 40px;
+	}
+}
