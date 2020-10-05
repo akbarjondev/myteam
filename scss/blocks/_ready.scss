@@ -15,7 +15,37 @@
 	padding-right: 100px;
 }
 .ready__heading {
+	margin: 0;
 	font-size: 48px;
 	line-height: 38px;
 	color: #012F34;
+}
+
+// responsive
+@include breakpoint-down(768px) {
+	.ready {
+		background-position: left calc(50% - 300px) bottom -120px;
+	}
+	.ready__heading {
+		font-size: 32px;
+		line-height: 32px;
+	}
+}
+
+@include breakpoint-down(375px) {
+	.ready {
+		padding-top: 83px;
+		padding-bottom: 83px;
+		background-position: left calc(50% - 95px) bottom -120px;
+	}
+	.ready__container {
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		padding-left: 24px;
+		padding-right: 24px;
+	}
+	.ready__heading {
+		margin-bottom: 24px;
+	}
 }
