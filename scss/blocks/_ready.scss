@@ -20,6 +20,9 @@
 	line-height: 38px;
 	color: #012F34;
 }
+.ready__button {
+	flex-shrink: 0;
+}
 
 // responsive
 @include breakpoint-down(768px) {
