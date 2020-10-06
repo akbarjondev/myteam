@@ -591,6 +591,11 @@ img {
   }
 }
 @media only screen and (max-width: 375px) {
+  .site-header {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
   .nav--dark {
     position: absolute;
     top: 0;
@@ -1219,6 +1224,91 @@ img {
 
   .social__list {
     margin-bottom: 16px;
+  }
+}
+.intro {
+  padding-top: 90px;
+  padding-bottom: 120px;
+  background-color: #014e56;
+  background-image: url("../img/intro-bg.png");
+  background-repeat: no-repeat;
+  background-size: 200px 200px;
+  background-position: right calc(50% - 700px) bottom;
+}
+
+.intro__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.intro__heading {
+  max-width: 350px;
+  margin: 0;
+  font-size: 64px;
+  line-height: 100px;
+  color: #ffffff;
+}
+
+.intro__text {
+  max-width: 730px;
+  margin: 0 30px;
+  font-size: 18px;
+  line-height: 28px;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.intro__text::before {
+  content: "";
+  display: block;
+  margin-bottom: 40px;
+  width: 50px;
+  height: 4px;
+  background-color: #F67E7E;
+}
+
+@media only screen and (max-width: 768px) {
+  .intro {
+    padding-top: 64px;
+    padding-bottom: 112px;
+    background-position: right calc(50% - 380px) bottom;
+  }
+
+  .intro__container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .intro__heading {
+    margin-bottom: 24px;
+  }
+
+  .intro__text {
+    max-width: 457px;
+    font-size: 15px;
+    line-height: 28px;
+  }
+
+  .intro__text::before {
+    display: none;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .intro {
+    padding-top: 32px;
+    background-position: right calc(50% - 180px) bottom -100px;
+  }
+
+  .intro__heading {
+    font-size: 40px;
+    line-height: 40px;
+    margin-bottom: 16px;
+  }
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .intro {
+    background-image: url("../img/intro-bg@2x.png");
   }
 }
 

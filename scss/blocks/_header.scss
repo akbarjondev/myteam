@@ -98,6 +98,10 @@
 }
 
 @include breakpoint-down(375px) {
+	.site-header {
+		padding-top: 48px;
+		padding-bottom: 48px;
+	}
 	.nav--dark {
 		position: absolute;
 		top: 0;
