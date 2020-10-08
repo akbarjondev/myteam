@@ -149,7 +149,10 @@
 	.directors {
 		padding-top: 88px;
 		padding-bottom: 88px;
-		background-position: top -100px left calc(50% - 200px), bottom right calc(50% - 300px);
+		background-position: top -100px left calc(50% - 200px), bottom right calc(50% - 150px);
+	}
+	.directors__item {
+		max-width: 327px;
 	}
 }
 
