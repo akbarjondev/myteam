@@ -1504,5 +1504,33 @@ img {
     background-image: url("../img/directors-bg-left@2x.png"), url("../img/directors-bg-right@2x.png");
   }
 }
+.clients {
+  padding-top: 140px;
+  padding-bottom: 140px;
+  background-color: #012f34;
+  background-image: url("../img/clients-bg.png");
+  background-repeat: no-repeat;
+  background-size: 200px 200px;
+  background-position: left calc(50% - 650px) top;
+}
+
+.clients__heading {
+  margin: 0;
+  margin-bottom: 64px;
+  font-size: 48px;
+  line-height: 48px;
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+}
+
+.clients__list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
 /*# sourceMappingURL=main.css.map */

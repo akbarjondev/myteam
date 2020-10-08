@@ -1,0 +1,24 @@
+.clients {
+	padding-top: 140px;
+	padding-bottom: 140px;
+	background-color: #012f34;
+	background-image: url("../img/clients-bg.png");
+	background-repeat: no-repeat;
+	background-size: 200px 200px;
+	background-position: left calc(50% - 650px) top;
+}
+.clients__heading {
+	margin: 0;
+	margin-bottom: 64px;
+	font-size: 48px;
+	line-height: 48px;
+	font-weight: 700;
+	color: $white;
+	text-align: center;
+}
+.clients__list {
+	@include reset-list;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
