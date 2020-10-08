@@ -393,12 +393,24 @@ img {
   margin-right: auto;
 }
 
+.main {
+  flex-grow: 1;
+}
+
 .text-coral {
   color: #F67E7E;
 }
 
 .text-blue {
   color: #79c8c7;
+}
+
+.m0 {
+  margin: 0;
+}
+
+.p0 {
+  padding: 0;
 }
 
 .visually-hidden {
@@ -1309,6 +1321,183 @@ img {
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .intro {
     background-image: url("../img/intro-bg@2x.png");
+  }
+}
+.directors {
+  padding-top: 140px;
+  padding-bottom: 140px;
+  background-color: #004047;
+  background-image: url("../img/directors-bg-left.png"), url("../img/directors-bg-right.png");
+  background-repeat: no-repeat;
+  background-size: 200px 200px, 147px 100px;
+  background-position: top left calc(50% - 760px), bottom right calc(50% - 600px);
+}
+
+.directors__heading {
+  margin-bottom: 64px;
+  font-size: 48px;
+  line-height: 48px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.directors__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style-type: none;
+}
+
+.directors__item {
+  position: relative;
+  width: 350px;
+  margin-bottom: 76px;
+  background-color: #012f34;
+}
+
+.profile {
+  position: relative;
+  padding: 32px 24px 56px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.profile__top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile__img {
+  order: -1;
+  width: 96px;
+  height: 96px;
+  margin-bottom: 13px;
+  border-radius: 50%;
+}
+
+.profile__name {
+  margin: 0;
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 700;
+  color: #79c8c7;
+}
+
+.profile__company {
+  font-size: 15px;
+  line-height: 25px;
+  font-weight: 500;
+  font-style: italic;
+  color: #ffffff;
+}
+
+.profile__bottom {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  transform-origin: bottom;
+  transform: translateY(100%);
+  background-color: #002529;
+  padding: 35px 24px 63px;
+  transition: 0.5s all ease;
+}
+
+.profile__saying {
+  margin-top: 13px;
+  margin-bottom: 24px;
+  font-size: 15px;
+  line-height: 25px;
+  font-style: italic;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.profile__social-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile__social {
+  display: block;
+  margin: 0 8px;
+}
+
+.profile__social:hover .social-icon {
+  fill: #F67E7E;
+}
+
+.social-icon {
+  display: block;
+}
+
+.directors__item-button {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  z-index: 10;
+  display: block;
+  width: 56px;
+  height: 56px;
+  padding: 0;
+  border-radius: 50%;
+  background-color: #F67E7E;
+  border: none;
+  background-image: url("../img/icon-plus.svg");
+  background-repeat: no-repeat;
+  background-size: 16px 16px;
+  background-position: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  transform-origin: center;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.directors__item-button.shape {
+  background-color: #79c8c7;
+  transform: translateX(-50%) translateY(-50%) rotate(45deg);
+}
+
+.directors__item-button.shape + .profile .profile__bottom {
+  transform: translateY(0);
+}
+
+@media only screen and (max-width: 768px) {
+  .directors {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-position: top left calc(50% - 360px), bottom right calc(50% - 300px);
+  }
+
+  .directors__heading {
+    font-size: 32px;
+    line-height: 32px;
+    margin-bottom: 48px;
+  }
+
+  .directors__list {
+    justify-content: center;
+  }
+
+  .directors__item {
+    max-width: 281px;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .directors {
+    padding-top: 88px;
+    padding-bottom: 88px;
+    background-position: top -100px left calc(50% - 200px), bottom right calc(50% - 300px);
+  }
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .directors {
+    background-image: url("../img/directors-bg-left@2x.png"), url("../img/directors-bg-right@2x.png");
   }
 }
 
