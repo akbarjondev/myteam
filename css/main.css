@@ -1533,4 +1533,55 @@ img {
   justify-content: space-between;
 }
 
+@media only screen and (max-width: 768px) {
+  .clients {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-position: left calc(50% - 300px) top -100px;
+  }
+
+  .clients__heading {
+    margin-bottom: 48px;
+    font-size: 32px;
+    line-height: 32px;
+  }
+
+  .clients__logo {
+    width: 100px;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .clients {
+    padding-top: 88px;
+    padding-bottom: 88px;
+  }
+
+  .clients__container {
+    padding-right: 24px;
+    padding-left: 24px;
+  }
+
+  .clients__heading {
+    margin-bottom: 64px;
+  }
+
+  .clients__list {
+    flex-direction: column;
+  }
+
+  .clients__item:not(:last-child) {
+    margin-bottom: 60px;
+  }
+
+  .clients__logo {
+    width: auto;
+    height: 20px;
+  }
+
+  .clients__logo:last-child {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
 /*# sourceMappingURL=main.css.map */
