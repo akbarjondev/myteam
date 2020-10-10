@@ -52,7 +52,8 @@
 }
 .site-header__burger {
 	flex-shrink: 0;
-	position: fixed;
+	position: relative;
+	top: 56px;
 	right: 24px;
 	z-index: 100;
 	padding: 0;
@@ -147,6 +148,7 @@
 		margin-top: 24px;
 	}
 	.site-header__burger--close {
+		position: fixed;
 		background-position: top right;
 	}
 }
