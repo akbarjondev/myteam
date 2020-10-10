@@ -557,8 +557,6 @@ img {
 .site-header__burger {
   flex-shrink: 0;
   position: relative;
-  top: 56px;
-  right: 24px;
   z-index: 100;
   padding: 0;
   border: none;
@@ -662,6 +660,8 @@ img {
 
   .site-header__burger--close {
     position: fixed;
+    top: 56px;
+    right: 40px;
     background-position: top right;
   }
 }
