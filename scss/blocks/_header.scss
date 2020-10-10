@@ -52,7 +52,8 @@
 }
 .site-header__burger {
 	flex-shrink: 0;
-	position: relative;
+	position: fixed;
+	right: 24px;
 	z-index: 100;
 	padding: 0;
 	border: none;
@@ -111,10 +112,11 @@
 		background-color: rgba(0, 0, 0, 0.2);
 	}
 	.nav-inner {
-		position: absolute;
+		position: fixed;
 		top: 0;
 		right: 0;
 		bottom: 0;
+		z-index: 11;
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
