@@ -73,6 +73,7 @@
 .message__line::before {
 	content: "This field is required";
 	display: none;
+	margin-top: 8px;
 	font-size: 10px;
 	line-height: 13px;
 	font-weight: 700;
@@ -91,13 +92,13 @@
 input:invalid {
   box-shadow: 0 0 1.5px 1px transparent;
 }
-.message__input:invalid  + .message__line {
+.message__input:not(:placeholder-shown):invalid + .message__line {
 	background-color: $light-coral;
 }
-.message__input:invalid {
+.message__input:not(:placeholder-shown):invalid {
 	color: $light-coral;
 }
-.message__input:invalid + .message__line::before {
+.message__input:not(:placeholder-shown):invalid + .message__line::before {
 	display: block;
 }
 .message__input:valid + .message__line {
@@ -125,7 +126,7 @@ input:invalid {
 	margin-top: 0;
 	margin-bottom: 24px;
 }
-.message__textarea:valid + .message__line {
+.message__textarea:not(:placeholder-shown) + .message__line {
 	background-color: #79c8c7;
 }
 .message__textarea:valid {
