@@ -39,6 +39,7 @@
 	margin-bottom: 30px;
 }
 .ask__item::before {
+	flex-shrink: 0;
 	content: "";
 	width: 72px;
 	height: 72px;
