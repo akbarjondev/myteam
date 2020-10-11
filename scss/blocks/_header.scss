@@ -86,9 +86,6 @@
 		margin-left: 28px;
 		margin-right: 28px;
 	}
-	.nav-inner {
-		justify-content: flex-start;
-	}
 }
 
 @include breakpoint-down(500px) {
@@ -119,6 +116,7 @@
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
+		justify-content: flex-start;
 		width: 66%;
 		padding-top: 112px;
 		padding-left: 48px;
